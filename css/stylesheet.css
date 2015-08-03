@@ -139,12 +139,9 @@ p {
   -webkit-animation-duration: 0.4s;
   -webkit-animation-timing-function: ease-out;
 }
-.active .left {
-  -webkit-animation-name: slide-in-left;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-out;
-}
-.active .right {
+.active .left,
+.active .right,
+.active .center {
   -webkit-animation-name: slide-in-left;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-out;
