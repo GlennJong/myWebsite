@@ -24,16 +24,16 @@ $(document).ready(function() {
 	  });
 	})
 	// view-box //
-	var image = $('.img');
+	var $image = $('.img');
 	var viewer = $('.viewer');
 	var mainImage = $('.main-viewer');
 	var $next = $('.next');
 	var $prev = $('.prev');
 
-	image.click(function(){
+	$image.click(function(){
 	  var mainContent = $(this).html();
-	  if(image.hasClass('open')) {
-	    image.removeClass('open');  
+	  if($image.hasClass('open')) {
+	    $image.removeClass('open');  
 	  }
 	  $(this).addClass('open');
 	  viewer.fadeIn(200);
@@ -63,7 +63,7 @@ $(document).ready(function() {
 	})
 	mainImage.click(function() {
 	  viewer.fadeOut(200);
-	  image.removeClass('open');
+	  $image.removeClass('open');
 	  mainImage.find('img').remove;
 	})
 })
