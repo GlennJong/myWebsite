@@ -7,7 +7,7 @@
   100% {-webkit-transform: translate(0px,0px);}
 }
 html {
-  overflow: auto;
+  overflow-x: hidden;
 }
 body {
   background-color: hsla(42,100%,50%,1);
@@ -101,7 +101,7 @@ p {
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 10px;
-  overflow: auto;
+  overflow: hidden;
   box-shadow: 3px 3px 8px 2px hsla(0,0%,0%,.2);
   -webkit-animation-name: slide-out-right;
   -webkit-animation-duration: 1s;
@@ -160,8 +160,8 @@ p {
   float: right;
 }
 .close {
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -170,7 +170,7 @@ p {
   cursor: pointer;
 }
 .close:before, .close:after {
-  content: "";
+  content:"";
   position: absolute;
   margin-left: -10px;
   height: 1px;
@@ -249,8 +249,6 @@ p {
   color: #FFFFFF;
 }
 .social-btn {
-  border:0;
-  background:transparent;
   display: inline-block;
   float: right;
   width: 25px;
@@ -260,12 +258,12 @@ p {
   margin-left: 5px;
   margin-bottom: 5px;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 0px 25px hsla(39,100%,58%,1);
+  box-shadow: inset 0px 0px 0px 0px hsla(39,100%,58%,1);
   cursor: pointer;
-  transition: box-shadow .3s ease-out;
+  transition: box-shadow .2s ease-out;
 }
 .social-btn:hover {
-  box-shadow: inset 0px 0px 0px 0px hsla(39,100%,58%,1);
+  box-shadow: inset 0px 0px 0px 25px hsla(39,100%,58%,1);
 }
 /* view-box */
 .viewer {
@@ -288,7 +286,7 @@ p {
 .next {
   right: 20%;
 }
-.main-viewer {
+.viewer-position {
   position: relative;
   height: 100%;
   margin: 0 auto;
@@ -297,18 +295,18 @@ p {
   justify-content: center;
 }
 @media(min-width:768px) {
-  .main-viewer {width:750px;}
+  .viewer-position {width:750px;}
 }
 @media(min-width:992px) {
-  .main-viewer {width:793px;}
+  .viewer-position {width:793px;}
 }
 @media(min-width:1200px) {
-  .main-viewer {width:980px;}
+  .viewer-position {width:980px;}
 }
-.view-content {
+.viewer-content {
   position: relative;
 }
-.view-content .info {
+.viewer-content .info {
   position: absolute;
   right: 10px;
   bottom: 10px;
