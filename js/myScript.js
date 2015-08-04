@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 	$next.click(function() {
 	  var all = $('.open').siblings('.img').andSelf().length;
-	  if ($('.open').index() === all - 1 ) {
+	  if ($('figure.open').index() === all - 1 ) {
 	    return;
 	  } 
 	  $('.open').removeClass('open').next().toggleClass('open');
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	})
 	$prev.click(function() {
 	  var all = $('.open').siblings('.img').length;
-	  if ($('.open').index() === 0) {
+	  if ($('figure.open').index() === 0) {
 	    return;
 	  } 
 	  $('.open').removeClass('open').prev().toggleClass('open');
