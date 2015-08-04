@@ -68,7 +68,7 @@ $(document).ready(function() {
 	  mainImage.find('img').remove;
 	})
 	// show photo info //
-	$info.mouseover(function() {
+	$info.mouseenter(function() {
 	  mainImage.find('img').addClass('blur');
 	  mainImage.find('p').fadeIn(200);
 	})
