@@ -26,9 +26,10 @@ $(document).ready(function() {
 	// view-box //
 	var $image = $('.img');
 	var viewer = $('.viewer');
-	var mainImage = $('.main-viewer');
+	var mainImage = $('.spotlight');
 	var $next = $('.next');
 	var $prev = $('.prev');
+	var $info = $('.info');
 
 	$image.click(function(){
 	  var mainContent = $(this).html();
@@ -65,5 +66,14 @@ $(document).ready(function() {
 	  viewer.fadeOut(200);
 	  $image.removeClass('open');
 	  mainImage.find('img').remove;
+	})
+	// show photo info //
+	$info.mouseover(function() {
+	  mainImage.find('img').addClass('blur');
+	  mainImage.find('p').fadeIn(200);
+	})
+	$info.mouseout(function() {
+	  mainImage.find('img').removeClass('blur');
+	  mainImage.find('p').fadeOut(200);
 	})
 })

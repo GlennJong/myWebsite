@@ -11,7 +11,7 @@ html {
 }
 body {
   background-color: hsla(42,100%,50%,1);
-  font-family: sans-serif, Microsoft JhengHei;
+  font-family: sans-serif, arial, Microsoft JhengHei;
   font-size: 14px;
 }
 a {
@@ -91,8 +91,8 @@ p {
 .content {
   display: none;
   margin-top: 50px;
-  margin-bottom: 80px;
-  z-index: 99
+  margin-bottom: 40px;
+  z-index: 99;
 }
 .sub-content {
   clear: both;
@@ -201,7 +201,7 @@ p {
   padding-top: 70px;
   padding-bottom: 70px;
   overflow: auto;
-  background: hsla(0,0%,10%,.98);
+  background: hsla(0,0%,10%,1);
 }
 #photograph .img {
   display: block;
@@ -222,6 +222,9 @@ p {
   width: auto;
   transition: opacity .2s ease-out;
   opacity: 1;
+}
+#photograph .img p {
+  display: none;
 }
 #photograph .opposite img {
   height: auto;
@@ -271,7 +274,7 @@ p {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: hsla(0,0%,10%,.95);
+  background-color: hsla(0,0%,10%,.96);
   z-index: 98;
 }
 .prev, .next {
@@ -286,6 +289,7 @@ p {
   right: 20%;
 }
 .main-viewer {
+  position: relative;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -301,22 +305,39 @@ p {
 @media(min-width:1200px) {
   .main-viewer {width:980px;}
 }
-.main-viewer img {
+.view-content {
+  position: relative;
+}
+.view-content .info {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 97;
+}
+.spotlight img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 90%;
   box-shadow: 3px 3px 8px 2px hsla(0,0%,0%,.2);
+  transition: all .2s ease-out;
 }
-.main-viewer p {
+.spotlight .blur {
+  -webkit-filter: blur(4px);
+  opacity: .6;
+}
+.spotlight p {
+  display: none;
   position: absolute;
   width: 400px;
   height: 400px;
-  color: #FFFFFF;
+  color: hsla(0,0%,100%,1);
   top: 50%;
   left: 50%;
   right: 50%;
   bottom: 50%;
   margin-top: -200px;
   margin-left: -200px;
+  transition: all .2s ease-out;
 }
