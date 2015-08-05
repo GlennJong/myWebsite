@@ -10,6 +10,9 @@ html {
   overflow-x: hidden;
 }
 body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   background-color: hsla(42,100%,50%,1);
   font-family: sans-serif, arial, Microsoft JhengHei;
   font-size: 14px;
@@ -63,7 +66,7 @@ p {
 }
 .logo img {
   width: 100%;
-  background: url('../img/photograph.jpg');
+  background: url('../img/photography.jpg');
   transition: all 0.4s ease-in;
 }
 .logo p {
@@ -196,37 +199,48 @@ p {
   -webkit-animation-timing-function: ease-out;
 }
 /* photograph */
-.img-content {
+#photography .img-content {
   margin-top: 50px;
   padding-top: 70px;
   padding-bottom: 70px;
-  overflow: auto;
-  background: hsla(0,0%,10%,1);
+  background: hsla(0,0%,14%,1);
 }
-#photograph .img {
+#photography .img-content div {
+  overflow: hidden;
+}
+#photography .img {
   display: block;
   float: left;
-  width: 224px;
-  height: 224px;
+  width: 365px;
+  height: 312px;
   cursor: pointer;
   overflow: hidden;
   margin: 0px 5px 10px 5px;
   transform: scale(1,1);
   transition: all .2s ease-out;
 }
-#photograph .img:hover {
-  transform: scale(1.1,1.1);
+@media(min-width:768px) {
+  #photography .img {width:365px;height: 312px;}
 }
-#photograph .img img {
+@media(min-width:992px) {
+  #photography .img {width:312px;height: 312px;}
+}
+@media(min-width:1200px) {
+  #photography .img {width:224px;height: 224px;}
+}
+#photography .img:hover {
+  transform: scale(1.05,1.05);
+}
+#photography .img img {
   height: 100%;
   width: auto;
   transition: opacity .2s ease-out;
   opacity: 1;
 }
-#photograph .img p {
+#photography .img p {
   display: none;
 }
-#photograph .opposite img {
+#photography .opposite img {
   height: auto;
   width: 100%;
 }
@@ -243,9 +257,11 @@ p {
   text-align: right;
   z-index: 98;
 }
-.powered {
+.copyright {
   float: left;
+  margin-top: 5px;
   font-size: 14px;
+  line-height: 35px;
   color: #FFFFFF;
 }
 .social-btn {
@@ -260,7 +276,7 @@ p {
   border-radius: 50%;
   box-shadow: inset 0px 0px 0px 0px hsla(39,100%,58%,1);
   cursor: pointer;
-  transition: box-shadow .2s ease-out;
+  transition: box-shadow .1s ease-out;
 }
 .social-btn:hover {
   box-shadow: inset 0px 0px 0px 25px hsla(39,100%,58%,1);
@@ -281,12 +297,26 @@ p {
   z-index: 99;
 }
 .prev {
-  left: 20%;
+  left: 10%;
 }
 .next {
-  right: 20%;
+  right: 10%;
 }
-.viewer-position {
+.viewer-close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  z-index: 99;
+}
+.info {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  cursor: pointer;
+  z-index: 97;
+}
+.viewer-content {
   position: relative;
   height: 100%;
   margin: 0 auto;
@@ -303,17 +333,7 @@ p {
 @media(min-width:1200px) {
   .viewer-position {width:980px;}
 }
-.viewer-content {
-  position: relative;
-}
-.viewer-content .info {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-  z-index: 97;
-}
-.spotlight img {
+.viewer-content img {
   width: auto;
   height: auto;
   max-width: 100%;
@@ -321,15 +341,16 @@ p {
   box-shadow: 3px 3px 8px 2px hsla(0,0%,0%,.2);
   transition: all .2s ease-out;
 }
-.spotlight .blur {
+.viewer-content .blur {
   -webkit-filter: blur(4px);
   opacity: .6;
 }
-.spotlight p {
+.viewer-content figcaption {
   display: none;
   position: absolute;
   width: 400px;
   height: 400px;
+  line-height: 2em;
   color: hsla(0,0%,100%,1);
   top: 50%;
   left: 50%;

@@ -26,7 +26,7 @@ $(document).ready(function() {
 	// view-box //
 	var $image = $('.img');
 	var viewer = $('.viewer');
-	var mainImage = $('.spotlight');
+	var mainImage = $('.viewer-content');
 	var $next = $('.next');
 	var $prev = $('.prev');
 	var $info = $('.info');
@@ -62,18 +62,14 @@ $(document).ready(function() {
 	  mainImage.html(main);
 	  mainImage.find('img').removeAttr('style');
 	})
-	mainImage.click(function() {
+	$('.viewer-close').click(function() {
 	  viewer.fadeOut(200);
 	  $image.removeClass('open');
 	  mainImage.find('img').remove;
 	})
 	// show photo info //
-	$info.mouseenter(function() {
-	  mainImage.find('img').addClass('blur');
-	  mainImage.find('p').fadeIn(200);
-	})
-	$info.mouseout(function() {
-	  mainImage.find('img').removeClass('blur');
-	  mainImage.find('p').fadeOut(200);
+	$info.click(function() {
+	  mainImage.find('img').toggleClass('blur');
+	  mainImage.find('figcaption').fadeToggle(200);
 	})
 })
