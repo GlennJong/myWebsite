@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$('.img img').lazyload({
+      effect : "fadeIn"
+	});
 	// menu function //
 	$('.button').click(function () {
 	  var target = '#' + $(this).data('target')
