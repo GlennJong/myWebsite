@@ -206,6 +206,7 @@ p {
 }
 #photography .img-content div {
   overflow: hidden;
+  margin-bottom: 40px;
 }
 #photography .img {
   display: block;
@@ -244,7 +245,52 @@ p {
   width: 100%;
 }
 
-/* about */
+/* works */
+#works .img-content {
+  margin-top: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: hsla(0,0%,14%,1);
+}
+#works .img-content div {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+#works .img {
+  display: block;
+  float: left;
+  width: 384px;
+  height: 192px;
+  cursor: pointer;
+  overflow: hidden;
+  /*transform: scale(1,1);*/
+  /*transition: all .2s ease-out;*/
+}
+/*@media(min-width:768px) {
+  #works .img {width:365px;height: 312px;}
+}
+@media(min-width:992px) {
+  #works .img {width:312px;height: 312px;}
+}
+@media(min-width:1200px) {
+  #works .img {width:224px;height: 224px;}
+}*/
+#works .img:hover {
+  /*transform: scale(1.05,1.05);*/
+}
+#works  .img img {
+  height: 100%;
+  width: auto;
+  transition: opacity .2s ease-out;
+  opacity: 1;
+}
+#works  .img p {
+  display: none;
+}
+#works  .opposite img {
+  height: auto;
+  width: 100%;
+}
 /* image */
 
 /* footer */
@@ -358,4 +404,10 @@ p {
   margin-top: -200px;
   margin-left: -200px;
   transition: all .2s ease-out;
+}
+.viewer-content div {
+  width: 500px;
+  height: 600px;
+  overflow: visible;
+  background: #FFFFFF;
 }
