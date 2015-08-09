@@ -28,23 +28,24 @@ $(document).ready(function() {
 	})
 	// view-box //
 	var $image = $('.img');
-	var viewer = $('.viewer');
-	var mainImage = $('.viewer-content');
+	var imageViewer = $('.image-viewer');
+	var imageContnet = $('.main-image');
 	var $next = $('.next');
 	var $prev = $('.prev');
 	var $info = $('.info');
 
+	// image-viewer //
 	$image.click(function(){
-	  var mainContent = $(this).html();
+	  var mainImage = $(this).html();
 	  if($image.hasClass('open')) {
 	    $image.removeClass('open');  
 	  }
 	  $(this).addClass('open');
-	  viewer.fadeIn(200);
-	  mainImage.html(mainContent);
-	  mainImage.find('img').removeAttr('style');
+	  imageViewer.fadeIn(200);
+	  imageContnet.html(mainImage);
+	  imageContnet.find('img').removeAttr('style');
 	})
-
+	// next/prev button //
 	$next.click(function() {
 	  var all = $('.open').siblings('.img').andSelf().length;
 	  if ($('figure.open').index() === all - 1 ) {
@@ -52,8 +53,8 @@ $(document).ready(function() {
 	  } 
 	  $('.open').removeClass('open').next().toggleClass('open');
 	  var main = $('.open').html();
-	  mainImage.html(main);
-	  mainImage.find('img').removeAttr('style');
+	  imageContnet.html(main);
+	  imageContnet.find('img').removeAttr('style');
 	})
 	$prev.click(function() {
 	  var all = $('.open').siblings('.img').length;
@@ -62,17 +63,33 @@ $(document).ready(function() {
 	  } 
 	  $('.open').removeClass('open').prev().toggleClass('open');
 	  var main = $('.open').html();
-	  mainImage.html(main);
-	  mainImage.find('img').removeAttr('style');
+	  imageContnet.html(main);
+	  imageContnet.find('img').removeAttr('style');
 	})
 	$('.viewer-close').click(function() {
-	  viewer.fadeOut(200);
+	  imageViewer.fadeOut(200);
 	  $image.removeClass('open');
-	  mainImage.find('img').remove;
+	  imageContnet.empty();
 	})
 	// show photo info //
 	$info.click(function() {
-	  mainImage.find('img').toggleClass('blur');
-	  mainImage.find('figcaption').fadeToggle(200);
+	  imageContnet.find('img').toggleClass('blur');
+	  imageContnet.find('figcaption').fadeToggle(200);
 	})
+	// article-viewer //
+	var $tab = $('.tab')
+	var articleViewer = $('.article-viewer')
+	var articleContnet = $('.main-article');
+	$tab.click(function(){
+	  var article = '#' + $(this).data('article')
+	  var $article = $(article)
+	  var mainArticle = $article.html();
+	  articleViewer.fadeIn(200);
+	  articleContnet.html(mainArticle);
+	})
+	$('.viewer-close').click(function() {
+	  articleViewer.fadeOut(200);
+	  articleContnet.empty();
+	})
+
 })
