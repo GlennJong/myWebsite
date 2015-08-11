@@ -3,7 +3,7 @@ $(document).ready(function() {
       effect : "fadeIn"
 	});
 	// menu function //
-	$('.button').click(function () {
+	$('.button a').click(function () {
 	  var target = '#' + $(this).data('target')
 	  var $target = $(target)
 	  if ($('.content').hasClass('active')) {
@@ -16,9 +16,9 @@ $(document).ready(function() {
 	  $('.content').removeClass('active');
 	})
 	// logo background //
-	$('.button').mouseover(function () {
-	  var a = $(this).index()
-	  logoPosition = a * -1170
+	$('.button a').mouseover(function () {
+	  var x = $(this).parent().index()
+	  logoPosition = x * -1170
 	  var target = $(this).data('target')
 	  logoBG = "url('./img/" + target + ".jpg')"
 	  $('.logo img').css({

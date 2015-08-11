@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
 <html>
 <head>
 	<title>Glenn Jong's Website</title>
@@ -12,10 +13,10 @@
 <body>
 	<ul class="nav">
 		<div class="container">
-			<li class="button" data-target="photography"><a href="#">Photograph</a></li>
-			<li class="button" data-target="works"><a href="#">Works</a></li>
-			<li class="button" data-target="others"><a href="#">Others</a></li>
-			<li class="button" data-target="about"><a href="#">About</a></li>
+			<li class="button"><a data-target="photography" href="#">Photograph</a></li>
+			<li class="button"><a data-target="works" href="#">Works</a></li>
+			<li class="button"><a data-target="others" href="#">Others</a></li>
+			<li class="button"><a data-target="about" href="#">About me</a></li>
 		</div>
 	</ul>
 	<div class="logo">
@@ -41,7 +42,7 @@
 						<h1>Photography</h1>
 						<p>攝影是我的興趣之一，對我而言，攝影是記錄生活的工具，常常會從這些日常攝影找到特別有味道的瞬間。<br/>
 						（使用Nikon D3200，常用鏡頭為 F3.5-5.6 18-55mm kit鏡 與 F2.8 40mm 人像微距鏡）<br/>
-						點擊相片可放大瀏覽。</p>
+						點擊相片可放大瀏覽，點擊右下角info可看相片訊息。</p>
 					</div>
 				</div>
 			</div>
@@ -49,7 +50,7 @@
 		<div class="img-content">
 			<div class="container">
 				<h2 style="color:hsla(42,100%,50%,1)">Lifestyle 生活攝影</h2>
-				<div>
+				<div class="box">
 					<figure class="img"><img data-original="photograph/DSC_0082.jpg">
 						<figcaption>info: <br/>
 						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/2.8<br/>快門：1/2500s<br/>ISO：100<br/>位於夏威夷waikiki beach的老伯，在晨間時分餵食野生鴿子。</figcaption>
@@ -62,31 +63,71 @@
 						<figcaption>info: <br/>
 						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/2.8<br/>快門：1/2500s<br/>ISO：100<br/>我哥正在餵食鴿子，鴿子對於陌生人毫不怕生。</figcaption>
 					</figure>
-					
 					<figure class="img"><img data-original="photograph/IMG_3264.jpg">
 						<figcaption>info: <br/>
-						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/3<br/>快門：1/60s<br/>ISO：100<br/>他叫咖哩，似乎不太喜歡拍照，但是總算抓到他靜止的瞬間。</figcaption>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/3<br/>快門：1/60s<br/>ISO：100<br/>我養的貓，名叫咖哩，似乎不太喜歡拍照，很會躲鏡頭，但總算是抓到他靜止的瞬間。</figcaption>
 					</figure>
-					<figure class="img"><img data-original="photograph/DSC_0640.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0650.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0327.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0143.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0149.jpg"></figure>
-					<figure class="img opposite"><img data-original="photograph/DSC_0579.jpg"></figure>
-					
-					<figure class="img"><img data-original="photograph/IMG_0902.jpg"></figure>
-									</div>
+					<figure class="img"><img data-original="photograph/DSC_0640.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/3.2<br/>快門：1/1000s<br/>ISO：400<br/>聞烤肉而來的小貓，看似餓了很久，期待吃到掉在地上的食物，而在牆上虎視眈眈。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0650.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/5.6<br/>快門：1/60s<br/>焦距：55mm<br/>ISO：200<br/>在庭院睡覺的野生貓咪，完全不理會在旁邊拍攝的我，相較於我家的咖哩貓，真是乖多了。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0327.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/5.6<br/>快門：1/125s<br/>焦距：55mm<br/>ISO：200<br/>在台東觀光區遇到的貓咪，慵懶地睡在地板的夾層間，漏網鏡頭是下一秒就被遊客的狗狗給吵醒。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0143.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/3.2<br/>快門：1/4000s<br/>ISO：200<br/>在大坑的櫻花林上拍攝，雖然已經過了最茂盛的時期，沒辦法拍出滿山櫻花的美景，不過還是拍到了太陽與櫻花組成的影像。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0149.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/3<br/>快門：1/2000s<br/>ISO：200<br/>在大坑的櫻花林上拍攝，已經過了最茂盛的時期，好不容易才找到這麼完整的櫻花。</figcaption>
+					</figure>
+					<figure class="img opposite"><img data-original="photograph/DSC_0579.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/2.8<br/>快門：1/1000s<br/>ISO：200<br/>
+						在台鐵成功站，照片中是我朋友，試著把人物拍得有感覺，但是還是很有難度。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/IMG_0902.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/8<br/>快門：1/80s<br/>ISO：400<br/>在岩石縫隙的寄居蟹。</figcaption>
+					</figure>
+				</div>
 				<h2 style="color:hsla(42,100%,50%,1)">Landscape 風景攝影</h2>
-				<div>
+				<div class="box">
 					<figure class="img"><img data-original="photograph/DSC_0545.jpg">
 						<figcaption>info: <br/>
-						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/4.5<br/>快門：1/800s<br/>ISO：200<br/>台東某個小港，日出晨光的照射讓小塔像是活了過來。</figcaption>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/4.5<br/>快門：1/800s<br/>焦距：18mm<br/>ISO：200<br/>台東某個小港，日出晨光的照射讓小塔像是活了過來。</figcaption>
 					</figure>
-					<figure class="img opposite"><img data-original="photograph/DSC_0509.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0026.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0490.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0482.jpg"></figure>
-					<figure class="img"><img data-original="photograph/DSC_0630.jpg"></figure>
+					<figure class="img opposite"><img data-original="photograph/DSC_0509.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/5.6<br/>快門：1/160s<br/>焦距：20mm<br/>ISO：200<br/>
+						小塔受到海風吹襲，有許多斑駁的歲月痕跡。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0026.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX Micro NIKKOR 40mm f/2.8G<br/>光圈：f/2.8<br/>快門：1/4000s<br/>ISO：400<br/>
+						夏威夷waikiki海灘的日落前，帆船、海與陽光形成很漂亮的景色。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0490.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/22<br/>快門：1/30s<br/>焦距：55mm<br/>ISO：200<br/>
+						台東的海岸線，即將日出之前，很漂亮的天空顏色。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0482.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/4<br/>快門：1/2500s<br/>焦距：18mm<br/>ISO：100<br/>
+						天空中有一隻鵝(雲)。</figcaption>
+					</figure>
+					<figure class="img"><img data-original="photograph/DSC_0630.jpg">
+						<figcaption>info: <br/>
+						Nikon D3200<br/>鏡頭：AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR<br/>光圈：f/6.3<br/>快門：1/1600s<br/>焦距：24mm<br/>ISO：200<br/>
+						是一條完整的彩虹。</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
@@ -96,11 +137,18 @@
 		<div class="container">
 			<div class="sub-content">
 				<button class="close"></button>
+				<div class="left">
+					<div class="title">
+						<img src="img/paint.jpg">
+						<span>Painting is good for you.</span>
+					</div>
+				</div>
 				<div class="center">
 					<div class="description">
 						<h1>Works</h1>
-						<p>從純粹創作，到後來漸漸理解設計的意義，這些作品也紀錄的不同時期的風貌:S</p>
-						<p>這裡存放了一些手繪、電繪、向量設計不同風格的作品。</p>
+						<p>畫畫是一件好事情，從塗鴉創作，到後來接觸到設計，這些作品也紀錄的不同時期的風貌，雖然創作與設計是兩個不同的領域，但我還是想把它們放在一起:S<br/>
+						這裡存放了一些手繪、電繪、向量設計不同風格的作品。<br/>
+						點擊圖片可放大瀏覽，點擊右下角info可看圖片訊息。</p>
 					</div>
 				</div>
 			</div>
@@ -108,42 +156,135 @@
 		<div class="img-content">
 			<div class="container">
 				<h2 style="color:hsla(42,100%,50%,1)">Illustrations 向量設計</h2>
-				<div>
-					<figure class="img"><img data-original="works/illustration/bright.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/caution.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/shadow.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/sticks.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/touch.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/illustration/speaker.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/kidstyle.jpg"></figure>
-					<figure class="img"><img data-original="works/illustration/viltrox.jpg"></figure>
-
+				<div class="box">
+					<figure class="img"><img data-original="works/illustration/bright.jpg">
+						<figcaption>info: 美工時的作品，我喜歡這個燈泡<br/>因為太喜歡了所以就將它獨立出來<br/>
+						做成一幅獨立的作品:D</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/caution.jpg">
+						<figcaption>info: 美工時的作品，禁止進入！<br/>一開始想到這個點子也蠻妙的，原本是為了製作吸引人目光的折扣廣告，封鎖線的配色更容易吸引目光。</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/shadow.jpg">
+						<figcaption>info: 美工時的作品，很流行的陰影icon（為商品製作）。<br/>用這種方式製作的向量icon好像可以增添一份高級與科技的感覺。</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/sticks.jpg">
+						<figcaption>info: 美工時的作品，注名防水防塵的貼紙效果。<br/>像是貼紙一樣邊緣有些微撕起來的痕跡，提升吸引力。</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/touch.jpg">
+						<figcaption>info: 美工時的作品，觸控與指紋的效果。<br/>這是個原本想到點子，最後用途卻絕然不同的典型案例...</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/highlight.jpg">
+						<figcaption>info: 美工時的作品，發光磁磚。<br/>用overlay的方式去疊加，疊出越來越明亮的顏色，上層物件更顯得閃閃發光。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/illustration/speaker.jpg" style="margin-top:-70px">
+						<figcaption>info: 美工時的作品，色彩繽紛！<br/>從這個課題充分理解到如何使用圖像設計去行銷一個廉價的商品...<br/>如果沒有特色...就自己創造出來吧:P</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/kidstyle.jpg">
+						<figcaption>info: 美工時的作品，兒童時代。<br/>像是手繪一樣去填色去描邊，可愛的配色會讓人想起小時候:D</figcaption></figure>
+					<figure class="img"><img data-original="works/illustration/viltrox.jpg">
+						<figcaption>info: 美工時的作品，攝影產品icon。<br/>分別是代表閃光燈、引閃器、轉接環、外接式螢幕，以最簡單的方式去設計。</figcaption></figure>
 				</div>
 				<h2 style="color:hsla(42,100%,50%,1)">Graphics 電繪創作</h2>
-				<div>
-					<figure class="img opposite"><img data-original="works/graphic/cloud.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/becareful.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/flower.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/currycat.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/nosmoke.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/heart.jpg"></figure>
-					<figure class="img opposite"><img data-original="works/graphic/see.jpg"></figure>
+				<div class="box">
+					<figure class="img opposite"><img data-original="works/graphic/cloud.jpg">
+						<figcaption>info: 目標是試著畫出雲朵般的的效果。<br/>再加上一架小飛機，感覺還不賴。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/becareful.jpg" style="margin-top:-300px">
+						<figcaption>info: 稍微模仿了下Emorca大師的畫法。<br/>海裡的鯊魚看起來真是歡樂又有趣。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/flower.jpg" style="margin-top:-100px">
+						<figcaption>info: 成年花精靈。<br/>即使是大叔的年紀，也是個不折不扣的花精靈。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/currycat.jpg" style="margin-top:-50px">
+						<figcaption>info: 咖哩貓。<br/>我家的貓咪，第一次使用SAI來做下的成果，感覺真不錯。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/nosmoke.jpg">
+						<figcaption>info: 禁菸。<br/>某次投稿，想以簡單的方式表示「是兄弟就要幫他戒菸」的感覺，可惜投稿沒上。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/heart.jpg">
+						<figcaption>info: 心臟很大顆。<br/>雖然是鉛筆稿，但是我很喜歡這張。</figcaption></figure>
+					<figure class="img opposite"><img data-original="works/graphic/see.jpg">
+						<figcaption>info: 你看不到我。<br/>有些人就是喜歡故意裝清高，卻又在意別人對自己的看法。</figcaption></figure>
 				</div>
 				<h2 style="color:hsla(42,100%,50%,1)">Website 網站</h2>
-				<div>
-					<div class="tab" data-article="ioio"><img src="http://placehold.it/150x150"></div>
+				<div class="box">
+					<div class="tab" data-article="ioio"><img src="works/website/ioio-head.jpg">
+						<p>為以前服務的公司所規劃排版視覺的購物車網站(不算是個設計)	，不能直接寫html與css讓這項任務變得格外艱辛...</p></div>
 					<div class="article" id="ioio">
-						<p><img src="works/website/ioio-web.jpg">
-						<img src="works/website/ioio-slide.jpg"></p>
+						<h2>美安直銷網路商店(Onecart購物車系統)</h2>
+						<p>Onecart是個很不親民的購物車系統，<br/>
+						不允許直接鍵入任何html與css code，只能透過後台去增加有限的html。<br/>為了製作網站外觀，用了許多旁門左道的方式來修改與製作整體首頁與排版樣式。<br/>
+						盡我全力去做最大限度的美化排版，並實現出網路商店首頁最基本的功能。<br/>
+						最後交出去這個網站，還算是讓人滿意，起碼給了客戶舒適的視覺去使用它。</p>
+						<img src="works/website/ioio-web.jpg"><br/>
+						<br/>
+						<br/>
+						<br/>
+						<p>唯一比較值得一提的是，特別用css寫了一個slide效果的首頁商品，彌補預設版型功能上的不足。<br/>
+						滑鼠移過會出現，會將商品敘述與商品連結按鈕滑出。</p>
+						<img src="works/website/ioio-slide.jpg"><br/>
 					</div>
-					<figure class="img"><img data-original="works/caution.jpg"></figure>
-					<figure class="img"><img data-original="works/shadow.jpg"></figure>
+					<div class="tab" data-article="rowa"><img src="works/website/rowa-head.jpg">
+						<p>為以前服務的公司所設計排版的購物車網站，是第一項網頁工作，經歷過多次排版修改，做出了最後這項版本。</p></div>
+					<div class="article" id="rowa">
+						<h2>ROWA官方網站(Opencart購物車系統)</h2>
+						<p>Opencart是個很棒的購物車系統，至今已更新至2.0版，甚至加入了bootstrap排版設計，<br/>
+						只可惜最後因為缺乏後端工程，而無法貿然直接升級至2.0版，非常可惜。<br/>
+						因此我在當前版本(1.5.5.1)的基礎下，去修改與設計既有的版面。<br/>
+						Opencart是個功能分明的的系統，作業時就容易得多了。<br/>
+						最後將整體網站風格設計為老闆想要的感覺。</p>
+						<img src="works/website/rowa-web.jpg"><br/>
+						<br/>
+						<br/>
+						<p>在首頁的設計上，增加了slide效果的區塊，以強調公司產品形象與重要的商品訊息。</p>
+						<img src="works/website/rowa-slide.jpg"><br/>
+						<br/>
+						<br/>
+						<p>由於預設的grid-list實在有些簡陋，因此也重新製作了版型與其按鈕。</p>
+						<img src="works/website/rowa-grid-list.jpg"><br/>
+					</div>
 				</div>
 				<h2 style="color:hsla(42,100%,50%,1)">Others 其他</h2>
-				<div>
-					<figure class="img"><img data-original="works/bright.jpg"></figure>
-					<figure class="img"><img data-original="works/caution.jpg"></figure>
-					<figure class="img"><img data-original="works/shadow.jpg"></figure>
+				<div class="box">
+					<div class="tab" data-article="company"><img src="works/others/card.jpg">
+						<p>為之前服務的公司所設計名片，擺脫醜醜的公版名片樣式，加入公司標準色好看多了。</p></div>
+					<div class="tab" data-article="company"><img src="works/others/book.jpg">
+						<p>為之前服務的公司所設計的商品型錄，在老闆諸多的期望下，完成了這本種類繁多的商品型錄。</p></div>
+					<div class="article" id="company">
+						<h2>商業名片與型錄</h2>
+						<p>在進前公司之前，也許是老闆比較不在意視覺，所以名片與型錄都是以簡單的排版為主，<br/>
+						只要具有顯示資訊的功能即可:P<br/>
+						後來有機會能夠重新設計名片，選擇了直式的形式，並且加入了公司的特色與主題來設計，<br/>
+						為了讓客戶能夠一眼看出我們銷售主力為攝影器材，所以加入了相機的元素。<br/>
+						使用霧面材質局部亮膜來作處理，企圖增加公司的質感:P</p>
+						<img src="works/others/card.jpg"><br/>
+						<br/>
+						<br/>
+						<p>在型錄的設計上，必須載明公司的所有商品資訊與即將上市的商品，讓我吃足了苦頭<br/>
+						老闆的期望是頁數越少，內容越豐富，實在是很難從中想到好的排版方式，<br/>
+						最後說服老闆將頁數提升，才折衷到目前看到的版本。</p>
+						<img src="works/others/book.jpg"><br/>
+						<br/>
+						<br/>
+						<p>即將上市的商品沒有實品可以參考，只能硬著頭皮去合成與調色，好在成果還不錯。</p>
+						<img src="works/others/book2.jpg"><br/>
+					</div>
+					<div class="tab" data-article="square"><img src="works/others/square/head.jpg">
+						<p>大學時製作的blog主題，當時的創作主軸是這兩顆方塊。</p></div>
+					<div class="article" id="square">
+						<h2>方塊們</h2>
+						<p>最初是為了不想使用blog的官方樣式與版型，但是也不懂語法，所以就在圖片方面下功夫。<br/>
+						固定期間繪製新的banner與元素，主要是以這兩個方塊作為創作主軸。</p>
+						<img src="works/others/square/banner1.gif"><br/>
+						<br/><br/>
+						<p>後來也試著嘗試加入一些科幻題材。</p>
+						<img src="works/others/square/banner2.jpg"><br/>
+						<br/>
+						<p>或者是動態的元素，讓這兩顆方塊變得更有趣。</p>
+						<img src="works/others/square/banner5.gif"><br/>
+						<img src="works/others/square/game.gif"><br/>
+						<br/>
+						<br/>
+						<p>方塊整體看起來像這樣。</p>
+						<img src="works/others/square/cubeA.png">
+						<img src="works/others/square/cubeB.png"><br/>
+						<br/>
+						<br/>
+						<p>也有像這樣的小型gif，轉吧轉吧～</p>
+						<img src="works/others/square/cubeA-turn.gif">
+						<img src="works/others/square/cubeB-turn.gif"><br/>
+						<p>I love pixel.</p>
+						<img src="works/others/square/cubeA.gif"><br/>
+						<br/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -154,13 +295,9 @@
 			<div class="sub-content">
 				<button class="close"></button>
 				<div class="center">
-					<h1>Others</h1>
-					<div class="">
-						<a class="img"><img src="http://placehold.it/150x150"></a>
-						<a class="img"><img src="http://placehold.it/150x150"></a>
-						<a class="img"><img src="http://placehold.it/150x150"></a>
-						<a class="img"><img src="http://placehold.it/150x150"></a>
-						<a class="img"><img src="http://placehold.it/250x150"></a>
+					<div class="description">
+						<h1>Others</h1>
+						<span>尚未完工:'(</span>
 					</div>
 				</div>
 			</div>	
@@ -179,7 +316,7 @@
 				</div>
 				<div class="center">
 					<div class="description">
-						<h1>About</h1>
+						<h1>About me</h1>
 						<p><b>info: </b>這是Glenn的個人網站，您可以在這裡瀏覽關於Glenn的作品。<br/>
 						我相信「設計」是一件很有趣的事情，「設計」能夠讓生活更美好，「設計」出有效、直接與快速的最佳方式，是每個設計師追求的目標。<br/>
 						生活中無處不是「設計」，新的生活心態出現，便會有新的設計思維，期許自己能夠不斷學習，掌握設計的脈絡。</p>
@@ -192,23 +329,24 @@
 	<div class="footer">
 		<div class="container">
 			<p class="copyright">Design by Glenn© 2015.</p>
-			<a href="" class="social-btn" target="_blank"><img src="img/twitter.png"></a>	  	
-			<a href="" class="social-btn" target="_blank"><img src="img/tumblr.png"></a>
-			<a href="" class="social-btn" target="_blank"><img src="img/pintrest.png"></a>
-			<a href="" class="social-btn" target="_blank"><img src="img/facebook.png"></a>
+			<a href="http://codepen.io/square0225/" class="social-btn" target="_blank"><img src="img/codepen.png"></a>
+			<a href="https://twitter.com/Square0225" class="social-btn" target="_blank"><img src="img/twitter.png"></a>	  	
+			<a href="https://www.tumblr.com/blog/currycatcat" class="social-btn" target="_blank"><img src="img/tumblr.png"></a>
+			<a href="https://www.pinterest.com/zaku0225/" class="social-btn" target="_blank"><img src="img/pintrest.png"></a>
+			<a href="https://www.facebook.com/square.jong" class="social-btn" target="_blank"><img src="img/facebook.png"></a>
 		</div>
 	</div>
 	<div class="image-viewer">
 		<a class="viewer-close"><img src="img/close.png"></a>
-		<a class="prev" href="#">prev</a>
-		<a class="next" href="#">next</a>
+		<a class="prev" href="#"><img src="img/prev.png"></a>
+		<a class="next" href="#"><img src="img/next.png"></a>
 		<div class="info"><img src="img/info.png"></div>
 		<div class="main-image">
 		</div>
 	</div>
 	<div class="article-viewer">
 		<a class="viewer-close"><img src="img/close.png"></a>
-		<div class="container">
+		<div class="container" style="position:relative;height:100%">
 			<div class="main-article"></div>
 		</div>
 	</div>

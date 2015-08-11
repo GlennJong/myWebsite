@@ -14,7 +14,7 @@ body {
   height: 100%;
   overflow: hidden;
   background-color: hsla(42,100%,50%,1);
-  font-family: sans-serif, arial, Microsoft JhengHei;
+  font-family: helvetica, arial, san-serif, Microsoft JhengHei;
   font-size: 14px;
 }
 a {
@@ -45,6 +45,7 @@ p {
 }
 /* container */
 .container {
+  width: 100%;
   margin: 0 auto;
 }
 @media(min-width:768px) {
@@ -75,7 +76,6 @@ p {
 }
 /* menu */
 .nav {
-  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -85,9 +85,14 @@ p {
   padding: 10px 0px;
   text-align: center;
 }
-.nav li:hover {
-  background-color: hsla(40,60%,70%,1);
-  cursor: pointer;
+.nav li a {
+  font-size: 2em;
+  color: #FFFFFF;
+  border-bottom: 3px solid hsla(0,0%,100%,0);
+  transition: all .2s ease-out;
+}
+.nav li a:hover {
+  border-bottom: 3px solid hsla(0,0%,100%,1);
 }
 /* content */
 .content {
@@ -204,15 +209,16 @@ p {
   padding-bottom: 70px;
   background: hsla(0,0%,14%,1);
 }
-#photography .img-content div {
+#photography .img-content .box {
+  padding-top: 10px;
   overflow: hidden;
   margin-bottom: 40px;
 }
 #photography .img {
   display: block;
   float: left;
-  width: 365px;
-  height: 312px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   overflow: hidden;
   margin: 0px 5px 10px 5px;
@@ -237,14 +243,13 @@ p {
   transition: opacity .2s ease-out;
   opacity: 1;
 }
-#photography .img p {
-  display: none;
-}
 #photography .opposite img {
   height: auto;
   width: 100%;
 }
-
+#photography .img figcaption {
+  display: none;
+}
 /* works */
 #works .img-content {
   margin-top: 50px;
@@ -252,40 +257,57 @@ p {
   padding-bottom: 70px;
   background: hsla(0,0%,14%,1);
 }
-#works .img-content div {
+#works .img-content .box {
   overflow: hidden;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 40px;
 }
-#works .img {
+#works .img,
+#works .tab {
+  position: relative;
   display: block;
   float: left;
   width: 384px;
   height: 192px;
   cursor: pointer;
   overflow: hidden;
-  /*transform: scale(1,1);*/
-  /*transition: all .2s ease-out;*/
 }
-/*@media(min-width:768px) {
-  #works .img {width:365px;height: 312px;}
+@media(min-width:768px) {
+  #works .img, #works .tab {width:370px;height:185px;}
 }
 @media(min-width:992px) {
-  #works .img {width:312px;height: 312px;}
+  #works .img, #works .tab {width:480px;height:240px;}
 }
 @media(min-width:1200px) {
-  #works .img {width:224px;height: 224px;}
-}*/
-#works .img:hover {
-  /*transform: scale(1.05,1.05);*/
+  #works .img, #works .tab {width:384px;height:192px;}
 }
-#works .img img {
+#works .img img,
+#works .tab img {
   height: 100%;
   width: auto;
   transition: opacity .2s ease-out;
   opacity: 1;
+  cursor: pointer;
 }
-#works .img p {
-  display: none;
+#works .img:hover img,
+#works .tab:hover img {
+  opacity: 0.1;
+}
+#works .img figcaption, 
+#works .tab p {
+  position: absolute;
+  top: 0;
+  line-height: 2em;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: hsla(0,0%,10%,0);
+  box-sizing: border-box;
+}
+#works .img:hover figcaption,
+#works .tab:hover p {
+  color: hsla(0,0%,100%,1);
 }
 #works .opposite img {
   height: auto;
@@ -343,12 +365,19 @@ p {
   position: absolute;
   top: 45%;
   z-index: 99;
+  transition: opacity .2s ease-out;
 }
 .prev {
   left: 10%;
+  opacity: .5;
 }
 .next {
   right: 10%;
+  opacity: .5;
+}
+.next:hover,
+.prev:hover {
+  opacity: 1;
 }
 .viewer-close {
   position: absolute;
@@ -397,14 +426,12 @@ p {
   display: none;
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 300px;
   line-height: 2em;
   color: hsla(0,0%,100%,1);
   top: 50%;
   left: 50%;
-  right: 50%;
-  bottom: 50%;
-  margin-top: -200px;
+  margin-top: -100px;
   margin-left: -200px;
   transition: all .2s ease-out;
 }
@@ -425,8 +452,34 @@ p {
   z-index: 98;
 }
 .article-viewer .main-article {
-  height: 600px;
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  width: 100%;
+  margin: 0 auto;
   padding: 20px;
   background: #FFFFFF;
+  text-align: center;
   overflow: auto;
+}
+.article-viewer .main-article p {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 16px;
+  text-align: left;
+  background-color: hsla(0,0%,85%,1);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.article-viewer .main-article p:after {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  content: url('../img/tail.png');
+}
+.article-viewer .main-article img {
+  max-width: 100%;
 }
